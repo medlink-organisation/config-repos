@@ -1,0 +1,28 @@
+
+  datasource:
+    url: ${PRATICIEN_DATASOURCE_URL}
+    username: ${PRATICIEN_DATASOURCE_USERNAME}
+    password: ${PRATICIEN_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${KEYCLOAK_ISSUER_URI}
+
+  grpc:
+    server:
+      port: ${GRPC_SERVER_PORT}
+
+

@@ -1,18 +1,24 @@
-management:
-  endpoints:
-    web:
-      exposure:
-        include:
-          - health
-          - info
-          - prometheus
 
-  endpoint:
-    health:
-      show-details: always
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: ${KEYCLOAK_SERVER_URL}/realms/${KEYCLOAK_REALM}/protocol/openid-connect/certs
+
+          issuer-uri: ${KEYCLOAK_ISSUER_URI}/realms/${KEYCLOAK_REALM}
+
+          audiences:
+            - medlink-api
+    profiles:
+    active: dev
 
 eureka:
   client:
+    service-url:
+      defaultZone: ${DISCOVERY_SERVICE_URL}
+
     register-with-eureka: true
     fetch-registry: true
 
