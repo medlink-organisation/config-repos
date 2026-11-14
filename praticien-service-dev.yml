@@ -1,3 +1,5 @@
+server:
+  port: 8064
 
   datasource:
     url: ${PRATICIEN_DATASOURCE_URL}
