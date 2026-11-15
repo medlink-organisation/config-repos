@@ -11,8 +11,8 @@ spring:
 
           audiences:
             - medlink-api
-    profiles:
-    active: dev
+  profiles:
+  active: dev
 
 eureka:
   client:
