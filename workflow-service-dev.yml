@@ -1,0 +1,13 @@
+spring: 
+  flowable:
+    database-schema-update: true
+    process:
+      async-executor-activate: true
+      async-executor-core-pool-size: 5
+      async-executor-max-pool-size: 10
+      async-executor-queue-capacity: 1000
+  datasource:   
+    url: ${WORKFLOW_DATASOURCE_URL}
+    username: ${WORKFLOW_DATASOURCE_USERNAME}
+    password: ${WORKFLOW_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
