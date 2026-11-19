@@ -6,6 +6,16 @@ spring:
       async-executor-core-pool-size: 5
       async-executor-max-pool-size: 10
       async-executor-queue-capacity: 1000
+    mail:
+    server:
+      host: smtp.gmail.com
+      port: 587
+      username: ${SMTP_USERNAME}
+      password: ${SMTP_PASSWORD}
+      use-tls: true
+      use-ssl: false
+      default-from: medilink.support1@gmail.com
+      default-charset: UTF-8
   datasource:   
     url: ${WORKFLOW_DATASOURCE_URL}
     username: ${WORKFLOW_DATASOURCE_USERNAME}
