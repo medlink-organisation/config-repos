@@ -1,8 +1,8 @@
 server:
   port: 8065
   shutdown: graceful
-  
-  datasource:
+spring:
+  datasource: 
     url: ${SCHEDULING_DATASOURCE_URL}
     username: ${SCHEDULING_DATASOURCE_USERNAME}
     password: ${SCHEDULING_DATASOURCE_PASSWORD}

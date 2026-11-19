@@ -2,10 +2,11 @@ server:
   port: 8066
   shutdown: graceful
   
+spring:
   datasource:
-    url: ${SCHEDULING_DATASOURCE_URL}
-    username: ${SCHEDULING_DATASOURCE_USERNAME}
-    password: ${SCHEDULING_DATASOURCE_PASSWORD}
+    url: ${MEDICAL_DATASOURCE_URL}
+    username: ${MEDICAL_DATASOURCE_USERNAME}
+    password: ${MEDICAL_DATASOURCE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
